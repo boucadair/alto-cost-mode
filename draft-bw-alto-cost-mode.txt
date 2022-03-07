@@ -197,19 +197,17 @@ Internet-Draft               ALTO Cost Mode                   March 2022
 
    The registry is initially populated with the following values:
 
-        +===========+=============================+===============+
-        | Cost Mode | Description                 | Specification |
-        +===========+=============================+===============+
-        | numerical | Indicates that numerical    | Section       |
-        |           | operations can be performed | 6.1.2.1 of    |
-        |           | on the returned costs       | RFC7285       |
-        +-----------+-----------------------------+---------------+
-        | ordinal   | Indicates that the cost     | Section       |
-        |           | values in a cost map        | 6.1.2.2 of    |
-        |           | represent ranking           | RFC7285       |
-        +-----------+-----------------------------+---------------+
-
-                                  Table 1
+   +===========+=============================+=================+
+   | Cost Mode | Description                 | Specification   |
+   +===========+=============================+=================+
+   | numerical | Indicates that numerical    | Section 6.1.2.1 |
+   |           | operations can be performed |  of RFC7285     |
+   |           | on the returned costs       |                 |
+   +-----------+-----------------------------+-----------------+
+   | ordinal   | Indicates that the cost     | Section 6.1.2.2 |
+   |           | values in a cost map        |  of RFC7285     |
+   |           | represent ranking           |                 |
+   +-----------+-----------------------------+-----------------+
 
    The assignment policy for this registry is "IETF Review" (Section 4.8
    of [RFC8126]).
@@ -218,6 +216,8 @@ Internet-Draft               ALTO Cost Mode                   March 2022
 
    This document does not introduce new concerns other than those
    already discussed in Section 15 of [RFC7285].
+
+
 
 
 

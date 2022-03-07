@@ -177,28 +177,19 @@ NEW:
       "ALTO Cost Modes" under the "Application-Layer Traffic Optimization
       (ALTO) Protocol" registry available at <xref target="ALTO"></xref>.</t>
 
-      <t>The registry is initially populated with the following values:</t>
-
-      <texttable>
-        <ttcol>Cost Mode</ttcol>
-
-        <ttcol>Description</ttcol>
-
-        <ttcol>Specification </ttcol>
-
-        <c>numerical</c>
-
-        <c>Indicates that numerical operations can be performed on the
-        returned costs</c>
-
-        <c>Section 6.1.2.1 of RFC7285</c>
-
-        <c>ordinal</c>
-
-        <c>Indicates that the cost values in a cost map represent ranking</c>
-
-        <c>Section 6.1.2.2 of RFC7285 </c>
-      </texttable>
+      <t>The registry is initially populated with the following values:<figure>
+          <artwork><![CDATA[+===========+=============================+=================+
+| Cost Mode | Description                 | Specification   |
++===========+=============================+=================+
+| numerical | Indicates that numerical    | Section 6.1.2.1 |
+|           | operations can be performed |  of RFC7285     |
+|           | on the returned costs       |                 |
++-----------+-----------------------------+-----------------+
+| ordinal   | Indicates that the cost     | Section 6.1.2.2 |
+|           | values in a cost map        |  of RFC7285     |
+|           | represent ranking           |                 |
++-----------+-----------------------------+-----------------+]]></artwork>
+        </figure></t>
 
       <t>The assignment policy for this registry is "IETF Review" (Section 4.8
       of <xref target="RFC8126"></xref>).</t>
