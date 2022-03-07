@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<?rfc toc="yes"?>
+<?rfc tocompact="yes"?>
+<?rfc tocdepth="4"?>
+<?rfc tocindent="yes"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes"?>
+<?rfc comments="yes"?>
+<?rfc inline="yes"?>
+<?rfc compact="yes"?>
+<?rfc subcompact="no"?>
+<rfc category="std" docName="draft-bw-alto-cost-mode-latest" ipr="trust200902"
+     updates="7285">
+  <front>
+    <title abbrev="ALTO Cost Mode">A Cost Mode Registry for the
+    Application-Layer Traffic Optimization (ALTO) Protocol</title>
+
+    <author fullname="Mohamed Boucadair" initials="M." surname="Boucadair">
+      <organization>Orange</organization>
+
+      <address>
+        <postal>
+          <street></street>
+
+          <city>Rennes</city>
+
+          <region></region>
+
+          <code>35000</code>
+
+          <country>France</country>
+        </postal>
+
+        <email>mohamed.boucadair@orange.com</email>
+      </address>
+    </author>
+
+    <author fullname="Qin Wu" initials="Q." surname="Wu">
+      <organization>Huawei</organization>
+
+      <address>
+        <postal>
+          <street>101 Software Avenue, Yuhua District</street>
+
+          <city>Nanjing</city>
+
+          <region>Jiangsu</region>
+
+          <code>210012</code>
+
+          <country>China</country>
+        </postal>
+
+        <email>bill.wu@huawei.com</email>
+      </address>
+    </author>
+
+    <date />
+
+    <workgroup>alto</workgroup>
+
+    <abstract>
+      <t>This document creates a new IANA registry for tracking cost modes
+      supported by the Application-Layer Traffic Optimization (ALTO) protocol.
+      Also, this document relaxes a constraint that was imposed by the ALTO
+      specification on allowed cost mode values.</t>
+
+      <t>This document updates RFC 7285.</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section anchor="introduction" title="Introduction">
+      <t>The cost mode attribute indicates how costs should be interpreted
+      when communicated in the Application-Layer Traffic Optimization (ALTO)
+      protocol <xref target="RFC7285"></xref>. The base ALTO specification
+      includes a provision for only two modes: <list style="hanging">
+          <t hangText="&quot;numerical&quot;:">Indicates that numerical
+          operations can be performed (e.g., normalization) on the returned
+          costs (Section 6.1.2.1 of <xref target="RFC7285"></xref>).</t>
+
+          <t hangText="&quot;ordinal&quot;:">Indicates that the cost values in
+          a cost map represent ranking (relative to all other values in a cost
+          map), not actual costs (Section 6.1.2.2 of <xref
+          target="RFC7285"></xref>).</t>
+        </list></t>
+
+      <t>Additional cost modes are required for specific ALTO deployment cases
+      (e.g., <xref target="I-D.ietf-alto-path-vector"></xref>). In order to
+      allow for such use cases, this document creates a new ALTO registry to
+      track new cost mode values (<xref target="IANA"></xref>) and relaxes the
+      constraints imposed by the base ALTO specification on allowed cost mode
+      values (<xref target="anupdate"></xref>).</t>
+    </section>
+
+    <section anchor="notation" title="Terminology">
+      <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+      "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+      "OPTIONAL" in this document are to be interpreted as described in BCP 14
+      <xref target="RFC2119"></xref><xref target="RFC8174"></xref> when, and
+      only when, they appear in all capitals, as shown here.</t>
+
+      <t>This document makes use of the terms defined in <xref
+      target="RFC7285"></xref>.</t>
+    </section>
+
+    <section anchor="anupdate" title="Updates to RFC7285">
+      <t></t>
+
+      <section title="Update to Section 6.1.2 of RFC7285">
+        <t>This document updates Section 6.1.2 of <xref
+        target="RFC7285"></xref> as follows:</t>
+
+        <t><figure>
+            <artwork><![CDATA[OLD: 
+   The cost mode attribute indicates how costs should be interpreted.
+   Specifically, the cost mode attribute indicates whether returned
+   costs should be interpreted as numerical values or ordinal rankings.
+
+   It is important to communicate such information to ALTO clients, as
+   certain operations may not be valid on certain costs returned by an
+   ALTO server.  For example, it is possible for an ALTO server to
+   return a set of IP addresses with costs indicating a ranking of the
+   IP addresses.  Arithmetic operations that would make sense for
+   numerical values, do not make sense for ordinal rankings.  ALTO
+   clients may handle such costs differently.
+
+   Cost modes are indicated in protocol messages as strings.
+
+NEW:
+]]></artwork>
+          </figure></t>
+
+        <t>The cost mode attribute indicates how costs should be interpreted.
+        This document defines two cost modes (numerical values or ordinal
+        rankings), but additional values can be defined in the future.</t>
+
+        <t>It is important to communicate such information to ALTO clients, as
+        certain operations may not be valid on certain costs returned by an
+        ALTO server. For example, it is possible for an ALTO server to return
+        a set of IP addresses with costs indicating a ranking of the IP
+        addresses. Arithmetic operations that would make sense for numerical
+        values, do not make sense for ordinal rankings. ALTO clients may
+        handle such costs differently.</t>
+
+        <t>Cost modes are indicated in protocol messages as strings.</t>
+
+        <t>Future documents that define a new mode SHOULD indicate whether a
+        new defined cost mode apply to all or a subset of cost types. </t>
+      </section>
+
+      <section title="Update to Section 10.5 of RFC7285">
+        <t>This document updates Section 10.5 of <xref
+        target="RFC7285"></xref> as follows:</t>
+
+        <t><figure>
+            <artwork><![CDATA[OLD: 
+   A cost mode is encoded as a string.  The string MUST have a value of
+   either "numerical" or "ordinal".
+
+NEW:
+]]></artwork>
+          </figure>A cost mode is encoded as a string. The string MUST have a
+        value that is listed in the registry created in <xref
+        target="IANA"></xref> of RFCXXXX.</t>
+
+        <t><list style="symbols">
+            <t>Note to the RFC Editor: Please replace RFCXXXX with the RFC
+            number to be assigned to this document.</t>
+          </list></t>
+      </section>
+    </section>
+
+    <section anchor="IANA" title="IANA Considerations">
+      <t>This document requests IANA to create a new subregistry entitled
+      "ALTO Cost Modes" under the "Application-Layer Traffic Optimization
+      (ALTO) Protocol" registry available at <xref target="ALTO"></xref>.</t>
+
+      <t>The registry is initially populated with the following values:</t>
+
+      <texttable>
+        <ttcol>Cost Mode</ttcol>
+
+        <ttcol>Description</ttcol>
+
+        <ttcol>Specification </ttcol>
+
+        <c>numerical</c>
+
+        <c>Indicates that numerical operations can be performed on the
+        returned costs</c>
+
+        <c>Section 6.1.2.1 of RFC7285</c>
+
+        <c>ordinal</c>
+
+        <c>Indicates that the cost values in a cost map represent ranking</c>
+
+        <c>Section 6.1.2.2 of RFC7285 </c>
+      </texttable>
+
+      <t>The assignment policy for this registry is "IETF Review" (Section 4.8
+      of <xref target="RFC8126"></xref>).</t>
+    </section>
+
+    <section anchor="security" title="Security Considerations">
+      <t>This document does not introduce new concerns other than those
+      already discussed in Section 15 of <xref target="RFC7285"></xref>. </t>
+    </section>
+
+    <section anchor="ack" title="Acknowledgements">
+      <t>Many thanks to Benjamin Kaduk for spotting the issue during the
+      review of <xref target="I-D.ietf-alto-path-vector"></xref>.</t>
+
+      <t>Thanks to Adrian Farrel for the review and comments. </t>
+
+      <t>Special thanks to Kai Gao for Shepherding the document. </t>
+    </section>
+  </middle>
+
+  <back>
+    <references title="Normative References">
+      <?rfc include='reference.RFC.2119'?>
+
+      <?rfc include='reference.RFC.8174'?>
+
+      <?rfc include='reference.RFC.7285'?>
+    </references>
+
+    <references title="Informative References">
+      <?rfc include='reference.I-D.ietf-alto-path-vector'?>
+
+      <?rfc include='reference.RFC.8126'?>
+
+      <reference anchor="ALTO"
+                 target="https://www.iana.org/assignments/alto-protocol/alto-protocol.xhtml">
+        <front>
+          <title>Application-Layer Traffic Optimization (ALTO)
+          Protocol</title>
+
+          <author>
+            <organization></organization>
+          </author>
+
+          <date day="02" month="March" year="2022" />
+        </front>
+      </reference>
+    </references>
+  </back>
+</rfc>
