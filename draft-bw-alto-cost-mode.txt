@@ -6,7 +6,7 @@ alto                                                        M. Boucadair
 Internet-Draft                                                    Orange
 Updates: 7285 (if approved)                                        Q. Wu
 Intended status: Standards Track                                  Huawei
-Expires: 8 September 2022                                   7 March 2022
+Expires: 9 September 2022                                   8 March 2022
 
 
   A Cost Mode Registry for the Application-Layer Traffic Optimization
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 September 2022.
+   This Internet-Draft will expire on 9 September 2022.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Boucadair & Wu          Expires 8 September 2022                [Page 1]
+Boucadair & Wu          Expires 9 September 2022                [Page 1]
 
 Internet-Draft               ALTO Cost Mode                   March 2022
 
@@ -75,12 +75,12 @@ Table of Contents
      3.1.  Update to Section 6.1.2 of RFC7285  . . . . . . . . . . .   3
      3.2.  Update to Section 10.5 of RFC7285 . . . . . . . . . . . .   4
    4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
+   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
    6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
    7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      7.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
      7.2.  Informative References  . . . . . . . . . . . . . . . . .   5
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   5
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Boucadair & Wu          Expires 8 September 2022                [Page 2]
+Boucadair & Wu          Expires 9 September 2022                [Page 2]
 
 Internet-Draft               ALTO Cost Mode                   March 2022
 
@@ -165,7 +165,7 @@ Internet-Draft               ALTO Cost Mode                   March 2022
 
 
 
-Boucadair & Wu          Expires 8 September 2022                [Page 3]
+Boucadair & Wu          Expires 9 September 2022                [Page 3]
 
 Internet-Draft               ALTO Cost Mode                   March 2022
 
@@ -212,26 +212,32 @@ Internet-Draft               ALTO Cost Mode                   March 2022
    The assignment policy for this registry is "IETF Review" (Section 4.8
    of [RFC8126]).
 
+   Cost modes prefixed with "priv:" are reserved for Private Use
+   (Section 4.1 of [RFC8126]).
+
+
+
+
+
+
+
+Boucadair & Wu          Expires 9 September 2022                [Page 4]
+
+Internet-Draft               ALTO Cost Mode                   March 2022
+
+
 5.  Security Considerations
 
    This document does not introduce new concerns other than those
    already discussed in Section 15 of [RFC7285].
-
-
-
-
-
-Boucadair & Wu          Expires 8 September 2022                [Page 4]
-
-Internet-Draft               ALTO Cost Mode                   March 2022
-
 
 6.  Acknowledgements
 
    Many thanks to Benjamin Kaduk for spotting the issue during the
    review of [I-D.ietf-alto-path-vector].
 
-   Thanks to Adrian Farrel for the review and comments.
+   Thanks to Adrian Farrel, Dhruv Dhody, and Luis Miguel Contreras
+   Murillo for the review and comments.
 
    Special thanks to Kai Gao for Shepherding the document.
 
@@ -267,20 +273,21 @@ Internet-Draft               ALTO Cost Mode                   March 2022
               February 2022, <https://www.ietf.org/archive/id/draft-
               ietf-alto-path-vector-22.txt>.
 
+
+
+
+
+Boucadair & Wu          Expires 9 September 2022                [Page 5]
+
+Internet-Draft               ALTO Cost Mode                   March 2022
+
+
    [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
               Writing an IANA Considerations Section in RFCs", BCP 26,
               RFC 8126, DOI 10.17487/RFC8126, June 2017,
               <https://www.rfc-editor.org/info/rfc8126>.
 
 Authors' Addresses
-
-
-
-
-Boucadair & Wu          Expires 8 September 2022                [Page 5]
-
-Internet-Draft               ALTO Cost Mode                   March 2022
-
 
    Mohamed Boucadair
    Orange
@@ -326,11 +333,4 @@ Internet-Draft               ALTO Cost Mode                   March 2022
 
 
 
-
-
-
-
-
-
-
-Boucadair & Wu          Expires 8 September 2022                [Page 6]
+Boucadair & Wu          Expires 9 September 2022                [Page 6]

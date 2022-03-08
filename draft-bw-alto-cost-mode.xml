@@ -147,7 +147,7 @@ NEW:
         <t>Cost modes are indicated in protocol messages as strings.</t>
 
         <t>Future documents that define a new mode SHOULD indicate whether a
-        new defined cost mode apply to all or a subset of cost types. </t>
+        new defined cost mode apply to all or a subset of cost types.</t>
       </section>
 
       <section title="Update to Section 10.5 of RFC7285">
@@ -193,20 +193,24 @@ NEW:
 
       <t>The assignment policy for this registry is "IETF Review" (Section 4.8
       of <xref target="RFC8126"></xref>).</t>
+
+      <t>Cost modes prefixed with "priv:" are reserved for Private Use
+      (Section 4.1 of <xref target="RFC8126"></xref>).</t>
     </section>
 
     <section anchor="security" title="Security Considerations">
       <t>This document does not introduce new concerns other than those
-      already discussed in Section 15 of <xref target="RFC7285"></xref>. </t>
+      already discussed in Section 15 of <xref target="RFC7285"></xref>.</t>
     </section>
 
     <section anchor="ack" title="Acknowledgements">
       <t>Many thanks to Benjamin Kaduk for spotting the issue during the
       review of <xref target="I-D.ietf-alto-path-vector"></xref>.</t>
 
-      <t>Thanks to Adrian Farrel for the review and comments. </t>
+      <t>Thanks to Adrian Farrel, Dhruv Dhody, and Luis Miguel Contreras
+      Murillo for the review and comments.</t>
 
-      <t>Special thanks to Kai Gao for Shepherding the document. </t>
+      <t>Special thanks to Kai Gao for Shepherding the document.</t>
     </section>
   </middle>
 
