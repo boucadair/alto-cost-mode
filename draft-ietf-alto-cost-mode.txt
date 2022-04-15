@@ -6,12 +6,12 @@ alto                                                        M. Boucadair
 Internet-Draft                                                    Orange
 Updates: 7285 (if approved)                                        Q. Wu
 Intended status: Standards Track                                  Huawei
-Expires: October 12, 2022                                 April 10, 2022
+Expires: 17 October 2022                                   15 April 2022
 
 
   A Cost Mode Registry for the Application-Layer Traffic Optimization
                             (ALTO) Protocol
-                    draft-ietf-alto-cost-mode-latest
+                      draft-ietf-alto-cost-mode-02
 
 Abstract
 
@@ -37,38 +37,43 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 12, 2022.
+   This Internet-Draft will expire on 17 October 2022.
 
 Copyright Notice
 
    Copyright (c) 2022 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
-   This document is subject to BCP 78 and the IETF Trust's Legal
-   Provisions Relating to IETF Documents
-   (https://trustee.ietf.org/license-info) in effect on the date of
-   publication of this document.  Please review these documents
-   carefully, as they describe your rights and restrictions with respect
-   to this document.  Code Components extracted from this document must
 
 
 
-Boucadair & Wu          Expires October 12, 2022                [Page 1]
+
+
+
+
+
+
+Boucadair & Wu           Expires 17 October 2022                [Page 1]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
 
-   include Simplified BSD License text as described in Section 4.e of
-   the Trust Legal Provisions and are provided without warranty as
-   described in the Simplified BSD License.
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
 
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Updates to RFC7285  . . . . . . . . . . . . . . . . . . . . .   3
-     3.1.  Update to Section 6.1.2 of RFC7285  . . . . . . . . . . .   3
-     3.2.  Update to Section 10.5 of RFC7285 . . . . . . . . . . . .   3
+     3.1.  Updates to Section 6.1.2 of RFC7285 . . . . . . . . . . .   3
+     3.2.  Updates to Section 10.5 of RFC7285  . . . . . . . . . . .   4
    4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
    5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
    6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
@@ -94,9 +99,20 @@ Table of Contents
 
    Additional cost modes are required for specific ALTO deployment cases
    (e.g., [I-D.ietf-alto-path-vector]).  In order to allow for such use
-   cases, this document creates a new ALTO registry to track new cost
-   mode values (Section 4) and relaxes the constraints imposed by the
-   base ALTO specification on allowed cost mode values (Section 3).
+   cases, this document relaxes the constraints imposed by the base ALTO
+   specification on allowed cost mode values (Section 3) and creates a
+   new ALTO registry to track new cost modes values (Section 4).
+
+
+
+
+
+
+
+Boucadair & Wu           Expires 17 October 2022                [Page 2]
+
+Internet-Draft               ALTO Cost Mode                   April 2022
+
 
 2.  Terminology
 
@@ -106,19 +122,12 @@ Table of Contents
    14 [RFC2119][RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-
-
-
-Boucadair & Wu          Expires October 12, 2022                [Page 2]
-
-Internet-Draft               ALTO Cost Mode                   April 2022
-
-
    This document makes use of the terms defined in [RFC7285].
 
 3.  Updates to RFC7285
 
-3.1.  Update to Section 6.1.2 of RFC7285
+
+3.1.  Updates to Section 6.1.2 of RFC7285
 
    This document updates Section 6.1.2 of [RFC7285] as follows:
 
@@ -140,7 +149,7 @@ Internet-Draft               ALTO Cost Mode                   April 2022
  NEW:
 
    The cost mode attribute indicates how costs should be interpreted.
-   This document defines two cost modes (numerical values or ordinal
+   This document defines two cost modes (numerical values and ordinal
    rankings), but additional cost modes can be defined in the future.
 
    It is important to communicate such information to ALTO clients, as
@@ -153,22 +162,20 @@ Internet-Draft               ALTO Cost Mode                   April 2022
 
    Cost modes are indicated in protocol messages as strings.
 
-   Future documents that define a new cost mode SHOULD indicate whether
-   that new cost mode applies to all or a subset of cost metrics.
-
-3.2.  Update to Section 10.5 of RFC7285
-
-   This document updates Section 10.5 of [RFC7285] as follows:
 
 
 
-
-
-
-Boucadair & Wu          Expires October 12, 2022                [Page 3]
+Boucadair & Wu           Expires 17 October 2022                [Page 3]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
+
+   Future documents that define a new cost mode SHOULD indicate whether
+   that new cost mode applies to all or a subset of cost metrics.
+
+3.2.  Updates to Section 10.5 of RFC7285
+
+   This document updates Section 10.5 of [RFC7285] as follows:
 
  OLD:
     A cost mode is encoded as a string.  The string MUST have a value of
@@ -185,7 +192,7 @@ Internet-Draft               ALTO Cost Mode                   April 2022
    cost mode MUST have a value that is listed in the registry created in
    Section 4 of RFCXXXX.
 
-   o  Note to the RFC Editor: Please replace RFCXXXX with the RFC number
+   *  Note to the RFC Editor: Please replace RFCXXXX with the RFC number
       to be assigned to this document.
 
 4.  IANA Considerations
@@ -197,7 +204,7 @@ Internet-Draft               ALTO Cost Mode                   April 2022
    The registry is initially populated with the following values:
 
    +===========+=============================+=================+
-   | Cost Mode | Description                 | Specification   |
+   | Identifier| Description                 | Specification   |
    +===========+=============================+=================+
    | numerical | Indicates that numerical    | Section 6.1.2.1 |
    |           | operations can be performed |  of RFC7285     |
@@ -211,20 +218,16 @@ Internet-Draft               ALTO Cost Mode                   April 2022
    The assignment policy for this registry is "IETF Review" (Section 4.8
    of [RFC8126]).
 
-   Cost modes prefixed with "priv:" are reserved for Private Use
-   (Section 4.1 of [RFC8126]).
 
 
 
-
-
-
-
-
-Boucadair & Wu          Expires October 12, 2022                [Page 4]
+Boucadair & Wu           Expires 17 October 2022                [Page 4]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
+
+   Cost modes prefixed with "priv:" are reserved for Private Use
+   (Section 4.1 of [RFC8126]).
 
 5.  Security Considerations
 
@@ -268,41 +271,39 @@ Internet-Draft               ALTO Cost Mode                   April 2022
 7.2.  Informative References
 
    [ALTO]     "Application-Layer Traffic Optimization (ALTO) Protocol",
-              March 2022, <https://www.iana.org/assignments/alto-
+              2 March 2022, <https://www.iana.org/assignments/alto-
               protocol/alto-protocol.xhtml>.
 
 
 
 
-
-
-
-Boucadair & Wu          Expires October 12, 2022                [Page 5]
+Boucadair & Wu           Expires 17 October 2022                [Page 5]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
 
    [I-D.ietf-alto-path-vector]
               Gao, K., Lee, Y., Randriamasy, S., Yang, Y. R., and J. J.
-              Zhang, "An ALTO Extension: Path Vector", draft-ietf-alto-
-              path-vector-25 (work in progress), March 2022.
+              Zhang, "An ALTO Extension: Path Vector", Work in Progress,
+              Internet-Draft, draft-ietf-alto-path-vector-25, 20 March
+              2022, <https://www.ietf.org/archive/id/draft-ietf-alto-
+              path-vector-25.txt>.
 
 Authors' Addresses
 
    Mohamed Boucadair
    Orange
-   Rennes  35000
+   35000 Rennes
    France
-
    Email: mohamed.boucadair@orange.com
 
 
    Qin Wu
    Huawei
    101 Software Avenue, Yuhua District
-   Nanjing, Jiangsu  210012
+   Nanjing
+   Jiangsu, 210012
    China
-
    Email: bill.wu@huawei.com
 
 
@@ -332,5 +333,4 @@ Authors' Addresses
 
 
 
-
-Boucadair & Wu          Expires October 12, 2022                [Page 6]
+Boucadair & Wu           Expires 17 October 2022                [Page 6]

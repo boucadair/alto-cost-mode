@@ -10,8 +10,8 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-ietf-alto-cost-mode-latest"
-     ipr="trust200902" updates="7285">
+<rfc category="std" docName="draft-ietf-alto-cost-mode-02" ipr="trust200902"
+     updates="7285">
   <front>
     <title abbrev="ALTO Cost Mode">A Cost Mode Registry for the
     Application-Layer Traffic Optimization (ALTO) Protocol</title>
@@ -88,10 +88,10 @@
 
       <t>Additional cost modes are required for specific ALTO deployment cases
       (e.g., <xref target="I-D.ietf-alto-path-vector"></xref>). In order to
-      allow for such use cases, this document creates a new ALTO registry to
-      track new cost mode values (<xref target="IANA"></xref>) and relaxes the
-      constraints imposed by the base ALTO specification on allowed cost mode
-      values (<xref target="anupdate"></xref>).</t>
+      allow for such use cases, this document relaxes the constraints imposed
+      by the base ALTO specification on allowed cost mode values (<xref
+      target="anupdate"></xref>) and creates a new ALTO registry to track new
+      cost modes values (<xref target="IANA"></xref>).</t>
     </section>
 
     <section anchor="notation" title="Terminology">
@@ -108,7 +108,7 @@
     <section anchor="anupdate" title="Updates to RFC7285">
       <t></t>
 
-      <section title="Update to Section 6.1.2 of RFC7285">
+      <section title="Updates to Section 6.1.2 of RFC7285">
         <t>This document updates Section 6.1.2 of <xref
         target="RFC7285"></xref> as follows:</t>
 
@@ -133,7 +133,7 @@ NEW:
           </figure></t>
 
         <t>The cost mode attribute indicates how costs should be interpreted.
-        This document defines two cost modes (numerical values or ordinal
+        This document defines two cost modes (numerical values and ordinal
         rankings), but additional cost modes can be defined in the future.</t>
 
         <t>It is important to communicate such information to ALTO clients, as
@@ -151,7 +151,7 @@ NEW:
         metrics.</t>
       </section>
 
-      <section title="Update to Section 10.5 of RFC7285">
+      <section title="Updates to Section 10.5 of RFC7285">
         <t>This document updates Section 10.5 of <xref
         target="RFC7285"></xref> as follows:</t>
 
@@ -185,7 +185,7 @@ NEW:
 
       <t>The registry is initially populated with the following values:<figure>
           <artwork><![CDATA[+===========+=============================+=================+
-| Cost Mode | Description                 | Specification   |
+| Identifier| Description                 | Specification   |
 +===========+=============================+=================+
 | numerical | Indicates that numerical    | Section 6.1.2.1 |
 |           | operations can be performed |  of RFC7285     |
