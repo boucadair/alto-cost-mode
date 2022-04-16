@@ -6,7 +6,7 @@ alto                                                        M. Boucadair
 Internet-Draft                                                    Orange
 Updates: 7285 (if approved)                                        Q. Wu
 Intended status: Standards Track                                  Huawei
-Expires: 17 October 2022                                   15 April 2022
+Expires: 18 October 2022                                   16 April 2022
 
 
   A Cost Mode Registry for the Application-Layer Traffic Optimization
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 October 2022.
+   This Internet-Draft will expire on 18 October 2022.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Boucadair & Wu           Expires 17 October 2022                [Page 1]
+Boucadair & Wu           Expires 18 October 2022                [Page 1]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
@@ -99,9 +99,9 @@ Table of Contents
 
    Additional cost modes are required for specific ALTO deployment cases
    (e.g., [I-D.ietf-alto-path-vector]).  In order to allow for such use
-   cases, this document relaxes the constraints imposed by the base ALTO
-   specification on allowed cost mode values (Section 3) and creates a
-   new ALTO registry to track new cost modes values (Section 4).
+   cases, this document relaxes the constraint imposed by the base ALTO
+   specification on allowed cost modes (Section 3) and creates a new
+   ALTO registry to track new cost modes (Section 4).
 
 
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Boucadair & Wu           Expires 17 October 2022                [Page 2]
+Boucadair & Wu           Expires 18 October 2022                [Page 2]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
@@ -165,13 +165,15 @@ Internet-Draft               ALTO Cost Mode                   April 2022
 
 
 
-Boucadair & Wu           Expires 17 October 2022                [Page 3]
+Boucadair & Wu           Expires 18 October 2022                [Page 3]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
 
    Future documents that define a new cost mode SHOULD indicate whether
-   that new cost mode applies to all or a subset of cost metrics.
+   that new cost mode applies to all or a subset of cost metrics.  If
+   not explicitly indicated, the new cost mode applies to all cost
+   metrics.
 
 3.2.  Updates to Section 10.5 of RFC7285
 
@@ -203,28 +205,29 @@ Internet-Draft               ALTO Cost Mode                   April 2022
 
    The registry is initially populated with the following values:
 
-   +===========+=============================+=================+
-   | Identifier| Description                 | Specification   |
-   +===========+=============================+=================+
-   | numerical | Indicates that numerical    | Section 6.1.2.1 |
-   |           | operations can be performed |  of RFC7285     |
-   |           | on the returned costs       |                 |
-   +-----------+-----------------------------+-----------------+
-   | ordinal   | Indicates that the cost     | Section 6.1.2.2 |
-   |           | values in a cost map        |  of RFC7285     |
-   |           | represent ranking           |                 |
-   +-----------+-----------------------------+-----------------+
-
-   The assignment policy for this registry is "IETF Review" (Section 4.8
-   of [RFC8126]).
+   +===========-+=============================+====================+
+   | Identifier | Description                 | Intended Semantics |
+   +============+=============================+====================+
+   | numerical  | Indicates that numerical    | Section 6.1.2.1    |
+   |            | operations can be performed |  of RFC7285        |
+   |            | on the returned costs       |                    |
+   +------------+-----------------------------+--------------------+
+   | ordinal    | Indicates that the cost     | Section 6.1.2.2    |
+   |            | values in a cost map        |  of RFC7285        |
+   |            | represent ranking           |                    |
+   +------------+-----------------------------+--------------------+
 
 
 
 
-Boucadair & Wu           Expires 17 October 2022                [Page 4]
+
+Boucadair & Wu           Expires 18 October 2022                [Page 4]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
+
+   The assignment policy for this registry is "IETF Review" (Section 4.8
+   of [RFC8126]).
 
    Cost modes prefixed with "priv:" are reserved for Private Use
    (Section 4.1 of [RFC8126]).
@@ -270,17 +273,18 @@ Internet-Draft               ALTO Cost Mode                   April 2022
 
 7.2.  Informative References
 
-   [ALTO]     "Application-Layer Traffic Optimization (ALTO) Protocol",
-              2 March 2022, <https://www.iana.org/assignments/alto-
-              protocol/alto-protocol.xhtml>.
 
 
 
 
-Boucadair & Wu           Expires 17 October 2022                [Page 5]
+Boucadair & Wu           Expires 18 October 2022                [Page 5]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
+
+   [ALTO]     "Application-Layer Traffic Optimization (ALTO) Protocol",
+              2 March 2022, <https://www.iana.org/assignments/alto-
+              protocol/alto-protocol.xhtml>.
 
    [I-D.ietf-alto-path-vector]
               Gao, K., Lee, Y., Randriamasy, S., Yang, Y. R., and J. J.
@@ -329,8 +333,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-Boucadair & Wu           Expires 17 October 2022                [Page 6]
+Boucadair & Wu           Expires 18 October 2022                [Page 6]

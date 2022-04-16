@@ -60,6 +60,22 @@
 
     <workgroup>alto</workgroup>
 
+    <keyword>Optimization</keyword>
+
+    <keyword>service performance</keyword>
+
+    <keyword>cost metric</keyword>
+
+    <keyword>routing </keyword>
+
+    <keyword>computation</keyword>
+
+    <keyword>networks</keyword>
+
+    <keyword>service-network interaction</keyword>
+
+    <keyword>network programming</keyword>
+
     <abstract>
       <t>This document creates a new IANA registry for tracking cost modes
       supported by the Application-Layer Traffic Optimization (ALTO) protocol.
@@ -88,10 +104,10 @@
 
       <t>Additional cost modes are required for specific ALTO deployment cases
       (e.g., <xref target="I-D.ietf-alto-path-vector"></xref>). In order to
-      allow for such use cases, this document relaxes the constraints imposed
-      by the base ALTO specification on allowed cost mode values (<xref
+      allow for such use cases, this document relaxes the constraint imposed
+      by the base ALTO specification on allowed cost modes (<xref
       target="anupdate"></xref>) and creates a new ALTO registry to track new
-      cost modes values (<xref target="IANA"></xref>).</t>
+      cost modes (<xref target="IANA"></xref>).</t>
     </section>
 
     <section anchor="notation" title="Terminology">
@@ -147,7 +163,8 @@ NEW:
         <t>Cost modes are indicated in protocol messages as strings.</t>
 
         <t>Future documents that define a new cost mode SHOULD indicate
-        whether that new cost mode applies to all or a subset of cost
+        whether that new cost mode applies to all or a subset of cost metrics.
+        If not explicitly indicated, the new cost mode applies to all cost
         metrics.</t>
       </section>
 
@@ -184,17 +201,17 @@ NEW:
       (ALTO) Protocol" registry available at <xref target="ALTO"></xref>.</t>
 
       <t>The registry is initially populated with the following values:<figure>
-          <artwork><![CDATA[+===========+=============================+=================+
-| Identifier| Description                 | Specification   |
-+===========+=============================+=================+
-| numerical | Indicates that numerical    | Section 6.1.2.1 |
-|           | operations can be performed |  of RFC7285     |
-|           | on the returned costs       |                 |
-+-----------+-----------------------------+-----------------+
-| ordinal   | Indicates that the cost     | Section 6.1.2.2 |
-|           | values in a cost map        |  of RFC7285     |
-|           | represent ranking           |                 |
-+-----------+-----------------------------+-----------------+]]></artwork>
+          <artwork><![CDATA[+===========-+=============================+====================+
+| Identifier | Description                 | Intended Semantics |
++============+=============================+====================+
+| numerical  | Indicates that numerical    | Section 6.1.2.1    |
+|            | operations can be performed |  of RFC7285        |
+|            | on the returned costs       |                    |
++------------+-----------------------------+--------------------+
+| ordinal    | Indicates that the cost     | Section 6.1.2.2    |
+|            | values in a cost map        |  of RFC7285        |
+|            | represent ranking           |                    |
++------------+-----------------------------+--------------------+]]></artwork>
         </figure></t>
 
       <t>The assignment policy for this registry is "IETF Review" (Section 4.8
