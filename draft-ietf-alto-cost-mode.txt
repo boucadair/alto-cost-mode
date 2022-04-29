@@ -6,7 +6,7 @@ alto                                                        M. Boucadair
 Internet-Draft                                                    Orange
 Updates: 7285 (if approved)                                        Q. Wu
 Intended status: Standards Track                                  Huawei
-Expires: 18 October 2022                                   16 April 2022
+Expires: 31 October 2022                                   29 April 2022
 
 
   A Cost Mode Registry for the Application-Layer Traffic Optimization
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 October 2022.
+   This Internet-Draft will expire on 31 October 2022.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Boucadair & Wu           Expires 18 October 2022                [Page 1]
+Boucadair & Wu           Expires 31 October 2022                [Page 1]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
@@ -79,7 +79,7 @@ Table of Contents
    6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
    7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      7.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .   6
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Boucadair & Wu           Expires 18 October 2022                [Page 2]
+Boucadair & Wu           Expires 31 October 2022                [Page 2]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
@@ -131,71 +131,76 @@ Internet-Draft               ALTO Cost Mode                   April 2022
 
    This document updates Section 6.1.2 of [RFC7285] as follows:
 
- OLD:
-    The cost mode attribute indicates how costs should be interpreted.
-    Specifically, the cost mode attribute indicates whether returned
-    costs should be interpreted as numerical values or ordinal rankings.
+   OLD:
 
-    It is important to communicate such information to ALTO clients, as
-    certain operations may not be valid on certain costs returned by an
-    ALTO server.  For example, it is possible for an ALTO server to
-    return a set of IP addresses with costs indicating a ranking of the
-    IP addresses.  Arithmetic operations that would make sense for
-    numerical values, do not make sense for ordinal rankings.  ALTO
-    clients may handle such costs differently.
+      The cost mode attribute indicates how costs should be interpreted.
+      Specifically, the cost mode attribute indicates whether returned
+      costs should be interpreted as numerical values or ordinal
+      rankings.
 
-    Cost modes are indicated in protocol messages as strings.
+      It is important to communicate such information to ALTO clients,
+      as certain operations may not be valid on certain costs returned
+      by an ALTO server.  For example, it is possible for an ALTO server
+      to return a set of IP addresses with costs indicating a ranking of
+      the IP addresses.  Arithmetic operations that would make sense for
+      numerical values, do not make sense for ordinal rankings.  ALTO
+      clients may handle such costs differently.
 
- NEW:
+      Cost modes are indicated in protocol messages as strings.
 
-   The cost mode attribute indicates how costs should be interpreted.
-   This document defines two cost modes (numerical values and ordinal
-   rankings), but additional cost modes can be defined in the future.
+   NEW:
 
-   It is important to communicate such information to ALTO clients, as
-   certain operations may not be valid on certain costs returned by an
-   ALTO server.  For example, it is possible for an ALTO server to
-   return a set of IP addresses with costs indicating a ranking of the
-   IP addresses.  Arithmetic operations that would make sense for
-   numerical values, do not make sense for ordinal rankings.  ALTO
-   clients may handle such costs differently.
+      The cost mode attribute indicates how costs should be interpreted.
+      This document defines two cost modes (numerical values and ordinal
+      rankings), but additional cost modes can be defined in the future.
 
-   Cost modes are indicated in protocol messages as strings.
-
-
+      It is important to communicate such information to ALTO clients,
+      as certain operations may not be valid on certain costs returned
+      by an ALTO server.  For example, it is possible for an ALTO server
+      to return a set of IP addresses with costs indicating a ranking of
+      the IP addresses.  Arithmetic operations that would make sense for
+      numerical values, do not make sense for ordinal rankings.  ALTO
+      clients may handle such costs differently.
 
 
-Boucadair & Wu           Expires 18 October 2022                [Page 3]
+
+
+Boucadair & Wu           Expires 31 October 2022                [Page 3]
 
 Internet-Draft               ALTO Cost Mode                   April 2022
 
 
-   Future documents that define a new cost mode SHOULD indicate whether
-   that new cost mode applies to all or a subset of cost metrics.  If
-   not explicitly indicated, the new cost mode applies to all cost
-   metrics.
+      Cost modes are indicated in protocol messages as strings.
+
+      Future documents that define a new cost mode SHOULD indicate
+      whether that new cost mode applies to all or a subset of cost
+      metrics.  If not explicitly indicated, the new cost mode applies
+      to all cost metrics.
+
 
 3.2.  Updates to Section 10.5 of RFC7285
 
    This document updates Section 10.5 of [RFC7285] as follows:
 
- OLD:
-    A cost mode is encoded as a string.  The string MUST have a value of
-    either "numerical" or "ordinal".
+   OLD:
 
- NEW:
+      A cost mode is encoded as a string.  The string MUST have a value
+      of either "numerical" or "ordinal".
 
-   A cost mode is encoded as a string.  The string MUST be no more than
-   32 characters, and it MUST NOT contain characters other than US-ASCII
-   alphanumeric characters (U+0030-U+0039, U+0041 -U+005A, and
-   U+0061-U+007A), the hyphen-minus ('-', U+002D), the colon (':',
-   U+003A), or the low line ('_', +005F).  Cost modes reserved for
-   Private Use are prefixed with "priv:" (Section 4).  Otherwise, the
-   cost mode MUST have a value that is listed in the registry created in
-   Section 4 of RFCXXXX.
+   NEW:
+
+      A cost mode is encoded as a string.  The string MUST be no more
+      than 32 characters, and it MUST NOT contain characters other than
+      US-ASCII alphanumeric characters (U+0030-U+0039, U+0041 -U+005A,
+      and U+0061-U+007A), the hyphen-minus ('-', U+002D), the colon
+      (':', U+003A), or the low line ('_', +005F).  Cost modes reserved
+      for Private Use are prefixed with "priv:" (Section 4).  Otherwise,
+      the cost mode MUST have a value that is listed in the registry
+      created in Section 4 of RFCXXXX.
 
    *  Note to the RFC Editor: Please replace RFCXXXX with the RFC number
       to be assigned to this document.
+
 
 4.  IANA Considerations
 
@@ -204,6 +209,22 @@ Internet-Draft               ALTO Cost Mode                   April 2022
    (ALTO) Protocol" registry available at [ALTO].
 
    The registry is initially populated with the following values:
+
+
+
+
+
+
+
+
+
+
+
+
+Boucadair & Wu           Expires 31 October 2022                [Page 4]
+
+Internet-Draft               ALTO Cost Mode                   April 2022
+
 
    +===========-+=============================+====================+
    | Identifier | Description                 | Intended Semantics |
@@ -216,15 +237,6 @@ Internet-Draft               ALTO Cost Mode                   April 2022
    |            | values in a cost map        |  of RFC7285        |
    |            | represent ranking           |                    |
    +------------+-----------------------------+--------------------+
-
-
-
-
-
-Boucadair & Wu           Expires 18 October 2022                [Page 4]
-
-Internet-Draft               ALTO Cost Mode                   April 2022
-
 
    The assignment policy for this registry is "IETF Review" (Section 4.8
    of [RFC8126]).
@@ -247,6 +259,8 @@ Internet-Draft               ALTO Cost Mode                   April 2022
 
    Special thanks to Kai Gao for Shepherding the document.
 
+   Thanks to Martin Duke for the review.
+
 7.  References
 
 7.1.  Normative References
@@ -255,6 +269,18 @@ Internet-Draft               ALTO Cost Mode                   April 2022
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
+
+
+
+
+
+
+
+
+Boucadair & Wu           Expires 31 October 2022                [Page 5]
+
+Internet-Draft               ALTO Cost Mode                   April 2022
+
 
    [RFC7285]  Alimi, R., Ed., Penno, R., Ed., Yang, Y., Ed., Kiesel, S.,
               Previdi, S., Roome, W., Shalunov, S., and R. Woundy,
@@ -272,15 +298,6 @@ Internet-Draft               ALTO Cost Mode                   April 2022
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
 7.2.  Informative References
-
-
-
-
-
-Boucadair & Wu           Expires 18 October 2022                [Page 5]
-
-Internet-Draft               ALTO Cost Mode                   April 2022
-
 
    [ALTO]     "Application-Layer Traffic Optimization (ALTO) Protocol",
               2 March 2022, <https://www.iana.org/assignments/alto-
@@ -316,21 +333,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Boucadair & Wu           Expires 18 October 2022                [Page 6]
+Boucadair & Wu           Expires 31 October 2022                [Page 6]

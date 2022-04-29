@@ -66,7 +66,7 @@
 
     <keyword>cost metric</keyword>
 
-    <keyword>routing </keyword>
+    <keyword>routing</keyword>
 
     <keyword>computation</keyword>
 
@@ -128,70 +128,73 @@
         <t>This document updates Section 6.1.2 of <xref
         target="RFC7285"></xref> as follows:</t>
 
-        <t><figure>
-            <artwork><![CDATA[OLD: 
-   The cost mode attribute indicates how costs should be interpreted.
-   Specifically, the cost mode attribute indicates whether returned
-   costs should be interpreted as numerical values or ordinal rankings.
+        <t>OLD:<list style="empty">
+            <t>The cost mode attribute indicates how costs should be
+            interpreted. Specifically, the cost mode attribute indicates
+            whether returned costs should be interpreted as numerical values
+            or ordinal rankings.</t>
 
-   It is important to communicate such information to ALTO clients, as
-   certain operations may not be valid on certain costs returned by an
-   ALTO server.  For example, it is possible for an ALTO server to
-   return a set of IP addresses with costs indicating a ranking of the
-   IP addresses.  Arithmetic operations that would make sense for
-   numerical values, do not make sense for ordinal rankings.  ALTO
-   clients may handle such costs differently.
+            <t>It is important to communicate such information to ALTO
+            clients, as certain operations may not be valid on certain costs
+            returned by an ALTO server. For example, it is possible for an
+            ALTO server to return a set of IP addresses with costs indicating
+            a ranking of the IP addresses. Arithmetic operations that would
+            make sense for numerical values, do not make sense for ordinal
+            rankings. ALTO clients may handle such costs differently.</t>
 
-   Cost modes are indicated in protocol messages as strings.
+            <t>Cost modes are indicated in protocol messages as strings.</t>
+          </list></t>
 
-NEW:
-]]></artwork>
-          </figure></t>
+        <t>NEW:<list style="empty">
+            <t>The cost mode attribute indicates how costs should be
+            interpreted. This document defines two cost modes (numerical
+            values and ordinal rankings), but additional cost modes can be
+            defined in the future.</t>
 
-        <t>The cost mode attribute indicates how costs should be interpreted.
-        This document defines two cost modes (numerical values and ordinal
-        rankings), but additional cost modes can be defined in the future.</t>
+            <t>It is important to communicate such information to ALTO
+            clients, as certain operations may not be valid on certain costs
+            returned by an ALTO server. For example, it is possible for an
+            ALTO server to return a set of IP addresses with costs indicating
+            a ranking of the IP addresses. Arithmetic operations that would
+            make sense for numerical values, do not make sense for ordinal
+            rankings. ALTO clients may handle such costs differently.</t>
 
-        <t>It is important to communicate such information to ALTO clients, as
-        certain operations may not be valid on certain costs returned by an
-        ALTO server. For example, it is possible for an ALTO server to return
-        a set of IP addresses with costs indicating a ranking of the IP
-        addresses. Arithmetic operations that would make sense for numerical
-        values, do not make sense for ordinal rankings. ALTO clients may
-        handle such costs differently.</t>
+            <t>Cost modes are indicated in protocol messages as strings.</t>
 
-        <t>Cost modes are indicated in protocol messages as strings.</t>
+            <t>Future documents that define a new cost mode SHOULD indicate
+            whether that new cost mode applies to all or a subset of cost
+            metrics. If not explicitly indicated, the new cost mode applies to
+            all cost metrics.</t>
+          </list></t>
 
-        <t>Future documents that define a new cost mode SHOULD indicate
-        whether that new cost mode applies to all or a subset of cost metrics.
-        If not explicitly indicated, the new cost mode applies to all cost
-        metrics.</t>
+        <t></t>
       </section>
 
       <section title="Updates to Section 10.5 of RFC7285">
         <t>This document updates Section 10.5 of <xref
         target="RFC7285"></xref> as follows:</t>
 
-        <t><figure>
-            <artwork><![CDATA[OLD: 
-   A cost mode is encoded as a string.  The string MUST have a value of
-   either "numerical" or "ordinal".
+        <t>OLD:<list style="empty">
+            <t>A cost mode is encoded as a string. The string MUST have a
+            value of either "numerical" or "ordinal".</t>
+          </list></t>
 
-NEW:
-]]></artwork>
-          </figure>A cost mode is encoded as a string. The string MUST be no
-        more than 32 characters, and it MUST NOT contain characters other than
-        US-ASCII alphanumeric characters (U+0030-U+0039, U+0041 -U+005A, and
-        U+0061-U+007A), the hyphen-minus ('-', U+002D), the colon (':',
-        U+003A), or the low line ('_', +005F). Cost modes reserved for Private
-        Use are prefixed with "priv:" (<xref target="IANA"></xref>).
-        Otherwise, the cost mode MUST have a value that is listed in the
-        registry created in <xref target="IANA"></xref> of RFCXXXX.</t>
-
-        <t><list style="symbols">
+        <t>NEW:<list style="empty">
+            <t>A cost mode is encoded as a string. The string MUST be no more
+            than 32 characters, and it MUST NOT contain characters other than
+            US-ASCII alphanumeric characters (U+0030-U+0039, U+0041 -U+005A,
+            and U+0061-U+007A), the hyphen-minus ('-', U+002D), the colon
+            (':', U+003A), or the low line ('_', +005F). Cost modes reserved
+            for Private Use are prefixed with "priv:" (<xref
+            target="IANA"></xref>). Otherwise, the cost mode MUST have a value
+            that is listed in the registry created in <xref
+            target="IANA"></xref> of RFCXXXX.</t>
+          </list><list style="symbols">
             <t>Note to the RFC Editor: Please replace RFCXXXX with the RFC
             number to be assigned to this document.</t>
           </list></t>
+
+        <t></t>
       </section>
     </section>
 
@@ -234,6 +237,8 @@ NEW:
       Sabine Randriamasy, and Qiao Xiang for the review and comments.</t>
 
       <t>Special thanks to Kai Gao for Shepherding the document.</t>
+
+      <t>Thanks to Martin Duke for the review. </t>
     </section>
   </middle>
 
