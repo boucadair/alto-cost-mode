@@ -182,9 +182,9 @@
         <t>NEW:<list style="empty">
             <t>A cost mode is encoded as a string. The string MUST be no more
             than 32 characters, and it MUST NOT contain characters other than
-            US-ASCII alphanumeric characters (U+0030-U+0039, U+0041 -U+005A,
+            US-ASCII alphanumeric characters (U+0030-U+0039, U+0041-U+005A,
             and U+0061-U+007A), the hyphen-minus ('-', U+002D), the colon
-            (':', U+003A), or the low line ('_', +005F). Cost modes reserved
+            (':', U+003A), or the low line ('_', U+005F). Cost modes reserved
             for Private Use are prefixed with "priv:" (<xref
             target="IANA"></xref>). Otherwise, the cost mode MUST have a value
             that is listed in the registry created in <xref
@@ -240,7 +240,8 @@
 
       <t>Thanks to Martin Duke for the AD review.</t>
 
-      <t>Thanks to Roni Even for the gen-art review. </t>
+      <t>Thanks to Roni Even for the gen-art review and Jaime Jimenez for the
+      artart review.</t>
     </section>
   </middle>
 
