@@ -6,21 +6,26 @@ alto                                                        M. Boucadair
 Internet-Draft                                                    Orange
 Updates: 7285 (if approved)                                        Q. Wu
 Intended status: Standards Track                                  Huawei
-Expires: 13 November 2022                                    12 May 2022
+Expires: 18 November 2022                                    17 May 2022
 
 
   A Cost Mode Registry for the Application-Layer Traffic Optimization
                             (ALTO) Protocol
-                      draft-ietf-alto-cost-mode-02
+                      draft-ietf-alto-cost-mode-03
 
 Abstract
 
    This document creates a new IANA registry for tracking cost modes
    supported by the Application-Layer Traffic Optimization (ALTO)
-   protocol.  Also, this document relaxes a constraint that was imposed
+   Protocol.  Also, this document relaxes a constraint that was imposed
    by the ALTO specification on allowed cost mode values.
 
    This document updates RFC 7285.
+
+Editorial Note (To be removed by RFC Editor)
+
+   Please update RFC XXXX statements within the document with the RFC
+   number to be assigned to this document.
 
 Status of This Memo
 
@@ -37,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 November 2022.
+   This Internet-Draft will expire on 18 November 2022.
 
 Copyright Notice
 
@@ -48,12 +53,7 @@ Copyright Notice
 
 
 
-
-
-
-
-
-Boucadair & Wu          Expires 13 November 2022                [Page 1]
+Boucadair & Wu          Expires 18 November 2022                [Page 1]
 
 Internet-Draft               ALTO Cost Mode                     May 2022
 
@@ -86,7 +86,7 @@ Table of Contents
 
    The cost mode attribute indicates how costs should be interpreted
    when communicated in the Application-Layer Traffic Optimization
-   (ALTO) protocol [RFC7285].  The base ALTO specification includes a
+   (ALTO) Protocol [RFC7285].  The base ALTO specification includes a
    provision for only two modes:
 
    "numerical":  Indicates that numerical operations can be performed
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Boucadair & Wu          Expires 13 November 2022                [Page 2]
+Boucadair & Wu          Expires 18 November 2022                [Page 2]
 
 Internet-Draft               ALTO Cost Mode                     May 2022
 
@@ -165,7 +165,7 @@ Internet-Draft               ALTO Cost Mode                     May 2022
 
 
 
-Boucadair & Wu          Expires 13 November 2022                [Page 3]
+Boucadair & Wu          Expires 18 November 2022                [Page 3]
 
 Internet-Draft               ALTO Cost Mode                     May 2022
 
@@ -198,9 +198,6 @@ Internet-Draft               ALTO Cost Mode                     May 2022
       the cost mode MUST have a value that is listed in the registry
       created in Section 4 of RFCXXXX.
 
-   *  Note to the RFC Editor: Please replace RFCXXXX with the RFC number
-      to be assigned to this document.
-
 
 4.  IANA Considerations
 
@@ -221,22 +218,26 @@ Internet-Draft               ALTO Cost Mode                     May 2022
 
 
 
-Boucadair & Wu          Expires 13 November 2022                [Page 4]
+
+
+
+Boucadair & Wu          Expires 18 November 2022                [Page 4]
 
 Internet-Draft               ALTO Cost Mode                     May 2022
 
 
-   +===========-+=============================+====================+
-   | Identifier | Description                 | Intended Semantics |
-   +============+=============================+====================+
-   | numerical  | Indicates that numerical    | Section 6.1.2.1    |
-   |            | operations can be performed |  of RFC7285        |
-   |            | on the returned costs       |                    |
-   +------------+-----------------------------+--------------------+
-   | ordinal    | Indicates that the cost     | Section 6.1.2.2    |
-   |            | values in a cost map        |  of RFC7285        |
-   |            | represent ranking           |                    |
-   +------------+-----------------------------+--------------------+
+   +============+=============================+============+===========+
+   | Identifier | Description                 | Intended   | Reference |
+   |            |                             | Semantics  |           |
+   +============+=============================+============+===========+
+   | numerical  | Indicates that numerical    | Section    | RFCXXXX   |
+   |            | operations can be performed | 6.1.2.1 of |           |
+   |            | on the returned costs       | RFC7285    |           |
+   +------------+-----------------------------+------------+-----------+
+   | ordinal    | Indicates that the cost     | Section    | RFCXXXX   |
+   |            | values in a cost map        | 6.1.2.2 of |           |
+   |            | represent ranking           | RFC7285    |           |
+   +------------+-----------------------------+------------+-----------+
 
    The assignment policy for this registry is "IETF Review" (Section 4.8
    of [RFC8126]).
@@ -276,8 +277,7 @@ Internet-Draft               ALTO Cost Mode                     May 2022
 
 
 
-
-Boucadair & Wu          Expires 13 November 2022                [Page 5]
+Boucadair & Wu          Expires 18 November 2022                [Page 5]
 
 Internet-Draft               ALTO Cost Mode                     May 2022
 
@@ -333,4 +333,4 @@ Authors' Addresses
 
 
 
-Boucadair & Wu          Expires 13 November 2022                [Page 6]
+Boucadair & Wu          Expires 18 November 2022                [Page 6]

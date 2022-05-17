@@ -10,7 +10,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-ietf-alto-cost-mode-02" ipr="trust200902"
+<rfc category="std" docName="draft-ietf-alto-cost-mode-03" ipr="trust200902"
      updates="7285">
   <front>
     <title abbrev="ALTO Cost Mode">A Cost Mode Registry for the
@@ -78,19 +78,24 @@
 
     <abstract>
       <t>This document creates a new IANA registry for tracking cost modes
-      supported by the Application-Layer Traffic Optimization (ALTO) protocol.
+      supported by the Application-Layer Traffic Optimization (ALTO) Protocol.
       Also, this document relaxes a constraint that was imposed by the ALTO
       specification on allowed cost mode values.</t>
 
       <t>This document updates RFC 7285.</t>
     </abstract>
+
+    <note title="Editorial Note (To be removed by RFC Editor)">
+      <t>Please update RFC XXXX statements within the document with the RFC
+      number to be assigned to this document.</t>
+    </note>
   </front>
 
   <middle>
     <section anchor="introduction" title="Introduction">
       <t>The cost mode attribute indicates how costs should be interpreted
       when communicated in the Application-Layer Traffic Optimization (ALTO)
-      protocol <xref target="RFC7285"></xref>. The base ALTO specification
+      Protocol <xref target="RFC7285"></xref>. The base ALTO specification
       includes a provision for only two modes: <list style="hanging">
           <t hangText="&quot;numerical&quot;:">Indicates that numerical
           operations can be performed (e.g., normalization) on the returned
@@ -189,9 +194,6 @@
             target="IANA"></xref>). Otherwise, the cost mode MUST have a value
             that is listed in the registry created in <xref
             target="IANA"></xref> of RFCXXXX.</t>
-          </list><list style="symbols">
-            <t>Note to the RFC Editor: Please replace RFCXXXX with the RFC
-            number to be assigned to this document.</t>
           </list></t>
 
         <t></t>
@@ -204,24 +206,26 @@
       (ALTO) Protocol" registry available at <xref target="ALTO"></xref>.</t>
 
       <t>The registry is initially populated with the following values:<figure>
-          <artwork><![CDATA[+===========-+=============================+====================+
-| Identifier | Description                 | Intended Semantics |
-+============+=============================+====================+
-| numerical  | Indicates that numerical    | Section 6.1.2.1    |
-|            | operations can be performed |  of RFC7285        |
-|            | on the returned costs       |                    |
-+------------+-----------------------------+--------------------+
-| ordinal    | Indicates that the cost     | Section 6.1.2.2    |
-|            | values in a cost map        |  of RFC7285        |
-|            | represent ranking           |                    |
-+------------+-----------------------------+--------------------+]]></artwork>
+          <artwork><![CDATA[   +============+=============================+============+===========+
+   | Identifier | Description                 | Intended   | Reference |
+   |            |                             | Semantics  |           |
+   +============+=============================+============+===========+
+   | numerical  | Indicates that numerical    | Section    | RFCXXXX   |
+   |            | operations can be performed | 6.1.2.1 of |           |
+   |            | on the returned costs       | RFC7285    |           |
+   +------------+-----------------------------+------------+-----------+
+   | ordinal    | Indicates that the cost     | Section    | RFCXXXX   |
+   |            | values in a cost map        | 6.1.2.2 of |           |
+   |            | represent ranking           | RFC7285    |           |
+   +------------+-----------------------------+------------+-----------+
+]]></artwork>
         </figure></t>
 
       <t>The assignment policy for this registry is "IETF Review" (Section 4.8
       of <xref target="RFC8126"></xref>).</t>
 
       <t>Cost modes prefixed with "priv:" are reserved for Private Use
-      (Section 4.1 of <xref target="RFC8126"></xref>).</t>
+      (Section 4.1 of <xref target="RFC8126"></xref>). </t>
     </section>
 
     <section anchor="security" title="Security Considerations">
