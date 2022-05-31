@@ -114,6 +114,10 @@ Boucadair & Wu           Expires 2 December 2022                [Page 2]
 Internet-Draft               ALTO Cost Mode                     May 2022
 
 
+   The mechanisms defined in [RFC7285] are used to advertize the support
+   of new cost modes for specific cost metrics.  Refer to Section 4 for
+   more details.
+
 2.  Terminology
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -158,10 +162,6 @@ Internet-Draft               ALTO Cost Mode                     May 2022
       as certain operations may not be valid on certain costs returned
       by an ALTO server.  For example, it is possible for an ALTO server
       to return a set of IP addresses with costs indicating a ranking of
-      the IP addresses.  Arithmetic operations that would make sense for
-      numerical values, do not make sense for ordinal rankings.  ALTO
-      clients may handle such costs differently.
-
 
 
 
@@ -169,6 +169,10 @@ Boucadair & Wu           Expires 2 December 2022                [Page 3]
 
 Internet-Draft               ALTO Cost Mode                     May 2022
 
+
+      the IP addresses.  Arithmetic operations that would make sense for
+      numerical values, do not make sense for ordinal rankings.  ALTO
+      clients may handle such costs differently.
 
       Cost modes are indicated in protocol messages as strings.
 
@@ -214,10 +218,6 @@ Internet-Draft               ALTO Cost Mode                     May 2022
    practice, legacy ALTO servers will reply with the error code
    E_INVALID_FIELD_VALUE to any request that includes a cost type other
    than "numerical" or "ordinal" for the "routingcost" cost metric.
-
-
-
-
 
 
 

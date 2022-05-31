@@ -114,7 +114,9 @@
       target="anupdate"></xref>) and creates a new ALTO registry to track new
       cost modes (<xref target="IANA"></xref>).</t>
 
-      <t></t>
+      <t>The mechanisms defined in <xref target="RFC7285"></xref> are used to
+      advertize the support of new cost modes for specific cost metrics. Refer
+      to <xref target="bc"></xref> for more details. </t>
     </section>
 
     <section anchor="notation" title="Terminology">
@@ -202,7 +204,7 @@
       </section>
     </section>
 
-    <section title="Backward Compatibility Considerations">
+    <section anchor="bc" title="Backward Compatibility Considerations">
       <t>ALTO servers that support new code modes for specific cost metrics
       will use the mechanism specified in Section 9.2 of <xref
       target="RFC7285"></xref> to advertise their capabilities. ALTO clients
