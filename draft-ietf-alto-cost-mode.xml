@@ -115,7 +115,7 @@
       cost modes (<xref target="IANA"></xref>).</t>
 
       <t>The mechanisms defined in <xref target="RFC7285"></xref> are used to
-      advertize the support of new cost modes for specific cost metrics. Refer
+      advertise the support of new cost modes for specific cost metrics. Refer
       to <xref target="bc"></xref> for more details. </t>
     </section>
 
@@ -205,7 +205,7 @@
     </section>
 
     <section anchor="bc" title="Backward Compatibility Considerations">
-      <t>ALTO servers that support new code modes for specific cost metrics
+      <t>ALTO servers that support new cost modes for specific cost metrics
       will use the mechanism specified in Section 9.2 of <xref
       target="RFC7285"></xref> to advertise their capabilities. ALTO clients
       (including legacy) will use that information to specify cost constraints

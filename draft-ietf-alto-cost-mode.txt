@@ -114,7 +114,7 @@ Boucadair & Wu           Expires 2 December 2022                [Page 2]
 Internet-Draft               ALTO Cost Mode                     May 2022
 
 
-   The mechanisms defined in [RFC7285] are used to advertize the support
+   The mechanisms defined in [RFC7285] are used to advertise the support
    of new cost modes for specific cost metrics.  Refer to Section 4 for
    more details.
 
@@ -205,7 +205,7 @@ Internet-Draft               ALTO Cost Mode                     May 2022
 
 4.  Backward Compatibility Considerations
 
-   ALTO servers that support new code modes for specific cost metrics
+   ALTO servers that support new cost modes for specific cost metrics
    will use the mechanism specified in Section 9.2 of [RFC7285] to
    advertise their capabilities.  ALTO clients (including legacy) will
    use that information to specify cost constraints in their requests
