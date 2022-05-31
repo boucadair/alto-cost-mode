@@ -113,6 +113,8 @@
       by the base ALTO specification on allowed cost modes (<xref
       target="anupdate"></xref>) and creates a new ALTO registry to track new
       cost modes (<xref target="IANA"></xref>).</t>
+
+      <t></t>
     </section>
 
     <section anchor="notation" title="Terminology">
@@ -200,6 +202,24 @@
       </section>
     </section>
 
+    <section title="Backward Compatibility Considerations">
+      <t>ALTO servers that support new code modes for specific cost metrics
+      will use the mechanism specified in Section 9.2 of <xref
+      target="RFC7285"></xref> to advertise their capabilities. ALTO clients
+      (including legacy) use that information to specify cost constraints in
+      their requests (e.g., indicate a cost metric and a cost mode). An
+      example of such a behavior is depicted in Section 9.2.3 of <xref
+      target="RFC7285"></xref>.</t>
+
+      <t>If an ALTO client includes a cost mode that is not supported by an
+      ALTO server, the server indicates such an error with the error code
+      E_INVALID_FIELD_VALUE as per Section 8.5.2 of <xref
+      target="RFC7285"></xref>. In practice, legacy ALTO servers will reply
+      with the error code E_INVALID_FIELD_VALUE to any request that includes a
+      cost type other than "numerical" or "ordinal" for the "routingcost" cost
+      metric. </t>
+    </section>
+
     <section anchor="IANA" title="IANA Considerations">
       <t>This document requests IANA to create a new subregistry entitled
       "ALTO Cost Modes" under the "Application-Layer Traffic Optimization
@@ -225,7 +245,7 @@
       of <xref target="RFC8126"></xref>).</t>
 
       <t>Cost modes prefixed with "priv:" are reserved for Private Use
-      (Section 4.1 of <xref target="RFC8126"></xref>). </t>
+      (Section 4.1 of <xref target="RFC8126"></xref>).</t>
     </section>
 
     <section anchor="security" title="Security Considerations">
@@ -244,8 +264,10 @@
 
       <t>Thanks to Martin Duke for the AD review.</t>
 
-      <t>Thanks to Roni Even for the gen-art review and Jaime Jimenez for the
-      artart review.</t>
+      <t>Thanks to Roni Even for the gen-art review, Jaime Jimenez for the
+      artart review, and Stephen Farrell for the secdir review.</t>
+
+      <t>Thanks to Robert Wilton and Lars Eggert for the IESG review. </t>
     </section>
   </middle>
 
