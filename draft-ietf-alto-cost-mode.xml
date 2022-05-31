@@ -10,7 +10,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-ietf-alto-cost-mode-03" ipr="trust200902"
+<rfc category="std" docName="draft-ietf-alto-cost-mode-04" ipr="trust200902"
      updates="7285">
   <front>
     <title abbrev="ALTO Cost Mode">A Cost Mode Registry for the
@@ -217,7 +217,7 @@
       ALTO server, the server indicates such an error with the error code
       E_INVALID_FIELD_VALUE as per Section 8.5.2 of <xref
       target="RFC7285"></xref>. In practice, legacy ALTO servers will reply
-      with the error code E_INVALID_FIELD_VALUE to any request that includes a
+      with the error code E_INVALID_FIELD_VALUE to requests that include a
       cost type other than "numerical" or "ordinal" for the "routingcost" cost
       metric. </t>
     </section>

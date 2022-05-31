@@ -11,7 +11,7 @@ Expires: 2 December 2022                                     31 May 2022
 
   A Cost Mode Registry for the Application-Layer Traffic Optimization
                             (ALTO) Protocol
-                      draft-ietf-alto-cost-mode-03
+                      draft-ietf-alto-cost-mode-04
 
 Abstract
 
@@ -216,8 +216,8 @@ Internet-Draft               ALTO Cost Mode                     May 2022
    ALTO server, the server indicates such an error with the error code
    E_INVALID_FIELD_VALUE as per Section 8.5.2 of [RFC7285].  In
    practice, legacy ALTO servers will reply with the error code
-   E_INVALID_FIELD_VALUE to any request that includes a cost type other
-   than "numerical" or "ordinal" for the "routingcost" cost metric.
+   E_INVALID_FIELD_VALUE to requests that include a cost type other than
+   "numerical" or "ordinal" for the "routingcost" cost metric.
 
 
 
