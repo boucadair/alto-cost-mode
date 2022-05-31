@@ -203,9 +203,9 @@ Internet-Draft               ALTO Cost Mode                     May 2022
 
    ALTO servers that support new code modes for specific cost metrics
    will use the mechanism specified in Section 9.2 of [RFC7285] to
-   advertise their capabilities.  ALTO clients (including legacy) use
-   that information to specify cost constraints in their requests (e.g.,
-   indicate a cost metric and a cost mode).  An example of such a
+   advertise their capabilities.  ALTO clients (including legacy) will
+   use that information to specify cost constraints in their requests
+   (e.g., indicate a cost metric and a cost mode).  An example of such a
    behavior is depicted in Section 9.2.3 of [RFC7285].
 
    If an ALTO client includes a cost mode that is not supported by an

@@ -206,8 +206,8 @@
       <t>ALTO servers that support new code modes for specific cost metrics
       will use the mechanism specified in Section 9.2 of <xref
       target="RFC7285"></xref> to advertise their capabilities. ALTO clients
-      (including legacy) use that information to specify cost constraints in
-      their requests (e.g., indicate a cost metric and a cost mode). An
+      (including legacy) will use that information to specify cost constraints
+      in their requests (e.g., indicate a cost metric and a cost mode). An
       example of such a behavior is depicted in Section 9.2.3 of <xref
       target="RFC7285"></xref>.</t>
 
