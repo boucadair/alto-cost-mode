@@ -179,7 +179,7 @@
         <t></t>
       </section>
 
-      <section title="Updates to Section 10.5 of RFC7285">
+      <section anchor="up2" title="Updates to Section 10.5 of RFC7285">
         <t>This document updates Section 10.5 of <xref
         target="RFC7285"></xref> as follows:</t>
 
@@ -248,7 +248,9 @@
 
       <t>Requests to register a new ALTO cost mode must include the following
       information:<list style="hanging">
-          <t hangText="Identifier:">The name of the ALTO cost mode.</t>
+          <t hangText="Identifier:">The name of the ALTO cost mode. Refer to
+          <xref target="up2"></xref> for more details on allowed encoding.
+          </t>
 
           <t hangText="Description:">A short description of the desired ALTO
           cost mode.</t>

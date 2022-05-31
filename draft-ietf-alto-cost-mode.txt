@@ -253,7 +253,8 @@ Internet-Draft               ALTO Cost Mode                     May 2022
    Requests to register a new ALTO cost mode must include the following
    information:
 
-   Identifier:  The name of the ALTO cost mode.
+   Identifier:  The name of the ALTO cost mode.  Refer to Section 3.2
+      for more details on allowed encoding.
 
    Description:  A short description of the desired ALTO cost mode.
 
@@ -273,7 +274,6 @@ Internet-Draft               ALTO Cost Mode                     May 2022
 
    This document does not introduce new concerns other than those
    already discussed in Section 15 of [RFC7285].
-
 
 
 
