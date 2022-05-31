@@ -246,8 +246,28 @@
       <t>The assignment policy for this registry is "IETF Review" (Section 4.8
       of <xref target="RFC8126"></xref>).</t>
 
+      <t>Requests to register a new ALTO cost mode must include the following
+      information:<list style="hanging">
+          <t hangText="Identifier:">The name of the ALTO cost mode.</t>
+
+          <t hangText="Description:">A short description of the desired ALTO
+          cost mode.</t>
+
+          <t hangText="Intended Semantics:">A reference to where the semantic
+          of the desired cost mode is defined.</t>
+
+          <t hangText="Reference:">A reference to the document that registers
+          the cost mode. </t>
+        </list></t>
+
       <t>Cost modes prefixed with "priv:" are reserved for Private Use
-      (Section 4.1 of <xref target="RFC8126"></xref>).</t>
+      (Section 4.1 of <xref target="RFC8126"></xref>). This document requests
+      IANA to add the following note to the new subregistry:</t>
+
+      <t><list style="hanging">
+          <t hangText="Note:">Identifiers prefixed with 'priv:' are reserved
+          for Private Use (see [RFCXXXX], Section 5). </t>
+        </list></t>
     </section>
 
     <section anchor="security" title="Security Considerations">
@@ -269,7 +289,8 @@
       <t>Thanks to Roni Even for the gen-art review, Jaime Jimenez for the
       artart review, and Stephen Farrell for the secdir review.</t>
 
-      <t>Thanks to Robert Wilton and Lars Eggert for the IESG review. </t>
+      <t>Thanks to Robert Wilton, Lars Eggert, and Francesca Palombini for the
+      IESG review. </t>
     </section>
   </middle>
 

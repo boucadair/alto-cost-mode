@@ -77,11 +77,11 @@ Table of Contents
    4.  Backward Compatibility Considerations . . . . . . . . . . . .   4
    5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
+   7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   6
    8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
      8.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
      8.2.  Informative References  . . . . . . . . . . . . . . . . .   6
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   6
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   7
 
 1.  Introduction
 
@@ -250,13 +250,37 @@ Internet-Draft               ALTO Cost Mode                     May 2022
    The assignment policy for this registry is "IETF Review" (Section 4.8
    of [RFC8126]).
 
+   Requests to register a new ALTO cost mode must include the following
+   information:
+
+   Identifier:  The name of the ALTO cost mode.
+
+   Description:  A short description of the desired ALTO cost mode.
+
+   Intended Semantics:  A reference to where the semantic of the desired
+      cost mode is defined.
+
+   Reference:  A reference to the document that registers the cost mode.
+
    Cost modes prefixed with "priv:" are reserved for Private Use
-   (Section 4.1 of [RFC8126]).
+   (Section 4.1 of [RFC8126]).  This document requests IANA to add the
+   following note to the new subregistry:
+
+   Note:  Identifiers prefixed with 'priv:' are reserved for Private Use
+      (see [RFCXXXX], Section 5).
 
 6.  Security Considerations
 
    This document does not introduce new concerns other than those
    already discussed in Section 15 of [RFC7285].
+
+
+
+
+Boucadair & Wu           Expires 2 December 2022                [Page 5]
+
+Internet-Draft               ALTO Cost Mode                     May 2022
+
 
 7.  Acknowledgements
 
@@ -273,14 +297,8 @@ Internet-Draft               ALTO Cost Mode                     May 2022
    Thanks to Roni Even for the gen-art review, Jaime Jimenez for the
    artart review, and Stephen Farrell for the secdir review.
 
-   Thanks to Robert Wilton and Lars Eggert for the IESG review.
-
-
-
-Boucadair & Wu           Expires 2 December 2022                [Page 5]
-
-Internet-Draft               ALTO Cost Mode                     May 2022
-
+   Thanks to Robert Wilton, Lars Eggert, and Francesca Palombini for the
+   IESG review.
 
 8.  References
 
@@ -312,6 +330,14 @@ Internet-Draft               ALTO Cost Mode                     May 2022
               2 March 2022, <https://www.iana.org/assignments/alto-
               protocol/alto-protocol.xhtml>.
 
+
+
+
+Boucadair & Wu           Expires 2 December 2022                [Page 6]
+
+Internet-Draft               ALTO Cost Mode                     May 2022
+
+
    [I-D.ietf-alto-path-vector]
               Gao, K., Lee, Y., Randriamasy, S., Yang, Y. R., and J. J.
               Zhang, "An ALTO Extension: Path Vector", Work in Progress,
@@ -328,16 +354,6 @@ Authors' Addresses
    Email: mohamed.boucadair@orange.com
 
 
-
-
-
-
-
-Boucadair & Wu           Expires 2 December 2022                [Page 6]
-
-Internet-Draft               ALTO Cost Mode                     May 2022
-
-
    Qin Wu
    Huawei
    101 Software Avenue, Yuhua District
@@ -345,22 +361,6 @@ Internet-Draft               ALTO Cost Mode                     May 2022
    Jiangsu, 210012
    China
    Email: bill.wu@huawei.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
